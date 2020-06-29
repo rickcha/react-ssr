@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTest } from "../contexts/test";
 import { useHistory } from "react-router-dom";
 
-function Home() {
+function Test() {
   const history = useHistory();
   const { counter, increment, decrement } = useTest();
   const [localCounter, setLocalCounter] = useState(0);
@@ -16,12 +16,12 @@ function Home() {
   };
 
   const handleClickRedirect = () => {
-    history.push("/app/test");
+    history.push("/app");
   };
 
   return (
     <>
-      <h1>home.js</h1>
+      <h1>test.js</h1>
       <div>Welcome to React SSR Testing</div>
       <div>
         <div>Context Counter: {counter}</div>
@@ -33,9 +33,9 @@ function Home() {
         <button onClick={incrementLocal}>increment</button>
         <button onClick={decrementLocal}>decrement</button>
       </div>
-      <button onClick={handleClickRedirect}>Redirect to Test</button>
+      <button onClick={handleClickRedirect}>Redirect to Home</button>
     </>
   );
 }
 
-export default Home;
+export default Test;

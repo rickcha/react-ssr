@@ -1,8 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+
+import App from "./components/apps/index";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.hydrate(<App />, document.getElementById("root"));
+ReactDOM.hydrate(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
 
 serviceWorker.unregister();
