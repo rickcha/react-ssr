@@ -11,7 +11,7 @@ const PORT = 8000;
 
 const app = express();
 
-app.get(["/app", "/app*"], (req, res) => {
+app.get(["/page", "/page*"], (req, res) => {
   const context = {};
   const app = ReactDOMServer.renderToString(
     <StaticRouter location={req.url} context={context}>

@@ -16,7 +16,7 @@ function Test() {
   };
 
   const handleClickRedirect = () => {
-    history.push("/app");
+    history.push("/page");
   };
 
   return (
